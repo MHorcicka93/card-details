@@ -1,0 +1,52 @@
+.card {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 145px;
+        max-width: 300px;
+        min-width: 290px;
+        padding: 0 25px;
+
+        @media screen and (min-width:600px) {
+            min-width: 300px;
+            margin: auto;
+            width: 50%;
+        }
+
+    }
+
+    &__date {
+        width: 50px;
+    }
+
+}
+
+.input {
+
+    height: 30px;
+
+    &--lg {
+        width: 99%;
+    }
+
+    &__multiple {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.form {
+    &__container {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width:600px) {
+            width: 100%;
+        }
+
+    }
+}
