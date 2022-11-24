@@ -1,0 +1,126 @@
+.header {
+    &__background {
+        background: url("./images/bg-main-mobile.png") no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: end;
+        @include desktopView { //desktop start on 700px
+            background: url("./images/bg-main-desktop.png") no-repeat;
+            flex-direction: column;
+            height: 100vh;
+            width: 483px;
+        }
+    
+  
+    }
+}
+
+.card {
+    &__back {
+        width: max-content;
+        min-width: 250px;
+        max-width: 300px;
+    }
+
+
+&__front {
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -93px;
+        right: 65px;
+        // right: 30px;
+
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        min-width: 230px;
+
+        background: url("./images/bg-card-front.png") no-repeat;
+        background-size: 100%;
+        @include desktopView { //desktop start on 700px
+          
+            bottom: 185px;
+            // right: 65px;
+        }
+    
+        
+    }
+    &--content {
+        position: absolute;
+        bottom: -93px;
+        right: 45px;
+        width: 100%;
+        min-width: 230px;
+        height: 100%;
+        @include desktopView { //desktop start on 700px
+            width: 300px;
+            bottom: 190px;
+            right: 65px;
+        }
+     
+    }
+}
+
+&__container {
+    position: relative;
+    margin: 30px 15px 45px 0;
+    @include desktopView { //desktop start on 700px
+        
+        margin: 0; 
+        bottom: 90px;
+        left: 125px;
+    }
+
+}
+}
+
+.content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    width: 100%;
+    height: inherit;
+    color: white;
+    @include desktopView { //desktop start on 700px
+        padding: 0 20px;
+    }
+   
+    & img:first-child{
+        width: 25%;
+    }
+    &__text {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        width: 86%;
+        height: 38%;
+        letter-spacing: 2px;
+        & > p{
+            display: flex;
+            justify-content: space-between;
+        }
+        & p:nth-child(2n) {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            text-transform: uppercase;
+            & span:last-child{
+                
+                font-size: 10px;
+            }
+            font-weight: 300;
+        }
+    }
+
+}
+.responsive__container{
+    display: flex;
+    flex-direction: column;
+    @include desktopView { //desktop start on 700px  
+        flex-direction: row;
+    }
+}

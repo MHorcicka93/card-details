@@ -1,0 +1,12 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html,body{
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
