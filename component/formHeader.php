@@ -9,7 +9,7 @@
                         <div class="content">
                             <img src="images/card-logo.svg" alt="Card logo">
                             <div class="content__text">
-                                <p>0000 0000 0000</p>
+                                <p><span>0000</span><span>0000</span><span>0000</span><span>0000</span></p>
                                 <p>
                                     <span>Jane Appleseed</span><span>00/00</span>
                                 </p>
