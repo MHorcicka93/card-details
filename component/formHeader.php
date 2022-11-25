@@ -1,21 +1,26 @@
 
-    
     <header class="header__background">
             <!-- <div></div> -->
             <figure class="card__container">
                 <div class="card__front">
+                    <span class="card__cvc">
+                        <?php 
+                    if (isset($_POST["confirm"]) && !is_null($_POST["cvc"])) {
+                        echo $_POST["cvc"];
+                    }else{
+                        echo "123";
+                    }
+                    ?>
+                    </span>
                     <img class="card__back" src="images/bg-card-back.png" alt="Back Card">
                     <div class="card__front--content">
                         <div class="content">
                             <img src="images/card-logo.svg" alt="Card logo">
-                            <div class="content__text">
-                                <p><span>0000</span><span>0000</span><span>0000</span><span>0000</span></p>
-                                <p>
-                                    <span>Jane Appleseed</span><span>00/00</span>
-                                </p>
-                            </div>
+                          <?php include "./function/postInput.php";
+                          setContentCard();
+                          ?>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
