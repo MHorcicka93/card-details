@@ -14,13 +14,25 @@
    
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+        footer{
+            position: absolute;
+            bottom: 0;
+            left: 25vw;
+            height: 50px;
+        }
         .attribution {
             font-size: 11px;
             text-align: center;
+
         }
 
         .attribution a {
             color: hsl(228, 45%, 44%);
+        }
+        @media screen and (min-width:800px){
+            footer{
+                left: 40vw;
+            }
         }
     </style>
 </head>

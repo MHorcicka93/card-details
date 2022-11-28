@@ -10,7 +10,9 @@
             background: url("./images/bg-main-desktop.png") no-repeat;
             flex-direction: column;
             height: 100vh;
+            min-height: 700px;
             width: 483px;
+            flex: 0;
         }
 
 

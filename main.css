@@ -23,7 +23,9 @@ html, body {
     background: url("./images/bg-main-desktop.png") no-repeat;
     flex-direction: column;
     height: 100vh;
+    min-height: 700px;
     width: 483px;
+    flex: 0;
   }
 }
 
@@ -146,7 +148,6 @@ html, body {
   flex-direction: column;
   font-size: 10px;
   width: 100%;
-  margin: 70px auto;
   max-width: 300px;
   min-width: 290px;
   padding: 0 25px;
@@ -177,6 +178,7 @@ html, body {
   text-indent: 15px;
   border-radius: 9px;
   height: 30px;
+  cursor: pointer;
 }
 .input::-moz-placeholder {
   color: hsl(270deg, 3%, 87%);
@@ -219,23 +221,51 @@ html, body {
   margin: 20px 0 5px 0;
 }
 .label__row--space label:first-child {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .form__container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 60vh;
+  min-height: 550px;
 }
 @media screen and (min-width: 800px) {
   .form__container {
     justify-content: space-around;
     align-items: center;
     margin-left: 145px;
+    height: 100vh;
     width: 100%;
   }
 }
 
-[name=confirm] {
+.complete__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+@media screen and (min-width: 800px) {
+  .complete__container {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.complete__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  text-align: center;
+}
+.complete__redirect--home {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
   background-color: hsl(278deg, 68%, 11%);
   height: 40px;
   color: hsl(0deg, 0%, 100%);

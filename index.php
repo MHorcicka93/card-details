@@ -1,8 +1,8 @@
-<?php include "./component/header.php"; ?>
+<?php include "./template/header.php"; ?>
 
-<?php include "./component/formHeader.php" ;?>
-<?php  include "./component/form.php";?>      
+<?php include "./template/formHeader.php" ;?>
+<?php  include "./template/form.php";?>      
 
-<?php include "./component/footer.php" ;?>
+<?php include "./template/footer.php" ;?>
     
 
