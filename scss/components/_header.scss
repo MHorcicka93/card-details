@@ -6,9 +6,10 @@
         justify-content: end;
 
         @include desktopView {
-            //desktop start on 700px
+            //desktop start on 800px
             background: url("./images/bg-main-desktop.png") no-repeat;
             flex-direction: column;
+            background-size: cover;
             height: 100vh;
             min-height: 700px;
             width: 483px;
@@ -25,12 +26,7 @@
         width: max-content;
         min-width: 250px;
         max-width: 300px;
-        // &::before{
-            //     content: "000";
-            //     width: 50%;
-            //     height: 50%;
-            //     position: absolute;
-            // }
+
         }
         
         

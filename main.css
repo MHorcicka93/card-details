@@ -22,6 +22,7 @@ html, body {
   .header__background {
     background: url("./images/bg-main-desktop.png") no-repeat;
     flex-direction: column;
+    background-size: cover;
     height: 100vh;
     min-height: 700px;
     width: 483px;
