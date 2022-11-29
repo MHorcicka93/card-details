@@ -23,7 +23,9 @@ html, body {
     background: url("./images/bg-main-desktop.png") no-repeat;
     flex-direction: column;
     height: 100vh;
+    min-height: 700px;
     width: 483px;
+    flex: 0;
   }
 }
 
@@ -33,6 +35,9 @@ html, body {
   width: max-content;
   min-width: 250px;
   max-width: 300px;
+}
+.card__front {
+  position: relative;
 }
 .card__front::before {
   content: "";
@@ -66,6 +71,13 @@ html, body {
     right: 65px;
   }
 }
+.card__cvc {
+  position: absolute;
+  right: 40px;
+  top: 74px;
+  font-size: 10px;
+  color: white;
+}
 .card__container {
   position: relative;
   margin: 30px 15px 45px 0;
@@ -73,7 +85,7 @@ html, body {
 @media screen and (min-width: 800px) {
   .card__container {
     margin: 0;
-    bottom: 90px;
+    bottom: 240px;
     left: 125px;
   }
 }
@@ -101,11 +113,14 @@ html, body {
   justify-content: space-between;
   width: 86%;
   height: 38%;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 .content__text > p {
   display: flex;
   justify-content: space-between;
+}
+.content__text p:first-child {
+  letter-spacing: 3.5px;
 }
 .content__text p:nth-child(2n) {
   display: flex;
@@ -133,7 +148,6 @@ html, body {
   flex-direction: column;
   font-size: 10px;
   width: 100%;
-  margin: 70px auto;
   max-width: 300px;
   min-width: 290px;
   padding: 0 25px;
@@ -149,6 +163,11 @@ html, body {
     width: 50%;
   }
 }
+.card__form > span {
+  font-size: 9px;
+  letter-spacing: 0;
+  color: hsl(0deg, 100%, 66%);
+}
 .card__date {
   width: 50px;
 }
@@ -159,6 +178,15 @@ html, body {
   text-indent: 15px;
   border-radius: 9px;
   height: 30px;
+  cursor: pointer;
+}
+.input::-moz-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.input:-ms-input-placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+.input::placeholder {
   color: hsl(270deg, 3%, 87%);
 }
 .input--lg {
@@ -169,32 +197,80 @@ html, body {
   justify-content: space-between;
   width: 100%;
 }
+.input__multiple > div {
+  display: flex;
+  flex-direction: column;
+}
+.input__multiple div > span {
+  font-size: 9px;
+  letter-spacing: 0;
+  color: hsl(0deg, 100%, 66%);
+}
+.input__error {
+  border: 1px solid hsl(0deg, 100%, 66%);
+}
+.input__error::before {
+  content: "";
+  color: hsl(0deg, 100%, 66%);
+  width: 10px;
+  height: 5px;
+  position: absolute;
+}
 
 .label__row--space {
   margin: 20px 0 5px 0;
 }
 .label__row--space label:first-child {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .form__container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 60vh;
+  min-height: 550px;
 }
 @media screen and (min-width: 800px) {
   .form__container {
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     margin-left: 145px;
+    height: 100vh;
     width: 100%;
   }
 }
 
-[name=confirm] {
+.complete__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+@media screen and (min-width: 800px) {
+  .complete__container {
+    width: 100%;
+    height: 100vh;
+  }
+}
+.complete__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  text-align: center;
+}
+.complete__redirect--home {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
   background-color: hsl(278deg, 68%, 11%);
   height: 40px;
   color: hsl(0deg, 0%, 100%);
   border: none;
   border-radius: 10px;
   margin: 30px 0;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
